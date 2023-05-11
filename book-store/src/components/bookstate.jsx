@@ -1,4 +1,5 @@
 import Book from "./book"
+import AddForm from "./AddForm"
 
 const Bookstate = () => {
     return <>
@@ -12,6 +13,9 @@ const Bookstate = () => {
     <Book Name="Literary Translation" Author="Hasan ghazala"
     Genre="Education"
     />
+    <br/>
+    <br/>
+    <AddForm/>
     </>
 }
 
