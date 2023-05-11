@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Book = ( props) => {
     const { Name, Author, Genre } = props
     return <>
@@ -7,6 +9,12 @@ const Book = ( props) => {
         <button>Delete</button>
     </>
     }
+
+    Book.propTypes = {
+        Name: PropTypes.string.isRequired,
+        Author: PropTypes.string.isRequired,
+        Genre: PropTypes.string.isRequired,
+      };
 
 
 export default Book
