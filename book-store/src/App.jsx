@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+    <h1>book store</h1>
     <Nav/>
     <Routes>
      <Route path='/' element={<Bookstate/>}/>
