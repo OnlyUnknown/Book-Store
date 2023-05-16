@@ -1,7 +1,22 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-export const store = configureStore({
-    reducer: {
-        books: booksReducer,
+const initialState = {
+    catigory : []
+};
+
+ const catigorySlice = createSlice({
+    name: "Catigory",
+    initialState,
+    reducers: {
+        check:(state) => {
+            if(state.catigory.length < 1){
+                return "Under construction"
+            }
+        },
+       
     }
-})
+ })
+
+ export const {check} = catigorySlice.actions
+
+ export default catigorySlice.reducer
