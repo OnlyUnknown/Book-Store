@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { store } from './redux/store.jsx';
 import {addBook,removeBook} from './redux/books/booksSlice.jsx';
 import { check } from './redux/categories/categoriesSlice.jsx';
+import { Provider } from 'react-redux';
 
 console.log("initial state", store.getState())
 const unsubscribe = store.subscribe(() => {
@@ -21,7 +22,9 @@ unsubscribe()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+    <Provider store={store}>
     <App />
+    </Provider>
     </BrowserRouter>
   </React.StrictMode>,
 )
