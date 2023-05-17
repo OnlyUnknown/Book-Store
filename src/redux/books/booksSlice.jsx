@@ -25,10 +25,18 @@ const initialState = {
     name: "booksList",
     initialState,
     reducers: {
-        addBook:(state,action) => {
-            const bookTitle = action.payload;
-            state.booksList.push({Book : bookTitle,
-                 Id : state.booksList.length})
+        addBook:{
+            reducer(state, action){
+                const bookTitle = action.payload[0];
+                const Author = action.payload[1];
+                state.booksList.push({item_id : `item`+ state.booksList.length,
+                    title : bookTitle,
+                     item_id : state.booksList.length,
+                     author : Author})
+              },
+            
+
+           
         },
         removeBook: (state,action) => {
             const Id = action.payload
