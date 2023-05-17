@@ -35,8 +35,6 @@ const initialState = {
                      author : Author})
               },
             
-
-           
         },
         removeBook: (state,action) => {
             const Id = action.payload
