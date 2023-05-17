@@ -8,16 +8,16 @@ const initialState = {
         category: "Fiction"
       },
       {
-        "item_id": "item2",
-        "title": "Anna Karenina",
-        "author": "Leo Tolstoy",
-        "category": "Fiction"
+        item_id: "item2",
+        title: "Anna Karenina",
+        author: "Leo Tolstoy",
+        category: "Fiction"
       },
       {
-        "item_id": "item3",
-        "title": "The Selfish Gene",
-        "author": "Richard Dawkins",
-        "category": "Nonfiction"
+        item_id: "item3",
+        title: "The Selfish Gene",
+        author: "Richard Dawkins",
+        category: "Nonfiction"
       }]
 };
 
@@ -33,7 +33,7 @@ const initialState = {
         removeBook: (state,action) => {
             const Id = action.payload
             state.booksList = state.booksList.filter((item)=>
-                item.Id !== Id
+                item.item_id !== Id
             )
         }
     }
