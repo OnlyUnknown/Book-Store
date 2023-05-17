@@ -13,12 +13,6 @@ const unsubscribe = store.subscribe(() => {
   console.log("Updated state" , store.getState())
 })
 
-store.dispatch(check())
-store.dispatch(addBook("Eat That Frog"))
-store.dispatch(addBook("Automic Habits"))
-store.dispatch(removeBook(1))
-unsubscribe()
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>

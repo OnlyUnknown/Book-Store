@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     booksList : [ {
-        "item_id": "item1",
-        "title": "The Great Gatsby",
-        "author": "John Smith",
-        "category": "Fiction"
+        item_id: "item1",
+        title: "The Great Gatsby",
+        author: "John Smith",
+        category: "Fiction"
       },
       {
         "item_id": "item2",
