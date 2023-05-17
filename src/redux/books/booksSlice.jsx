@@ -31,7 +31,6 @@ const initialState = {
                 const Author = action.payload[1];
                 state.booksList.push({item_id : `item`+ state.booksList.length,
                     title : bookTitle,
-                     item_id : state.booksList.length,
                      author : Author})
               },
             

@@ -9,7 +9,7 @@ const BookList = () => {
     return(
         <div>
         {booksList.map((item) => {
-           return( <Book id={item.item_id} Name={item.title} 
+           return( <Book key={item.item_id} id={item.item_id} Name={item.title} 
             Author={item.author} 
             Genre={item.catigory}/>
            )
