@@ -105,6 +105,8 @@ const initialState = {
      .addCase(postBooks.fulfilled,(state,action) => {
       state.isLoading = false
       state.count++
+     }).addCase(postBooks.rejected,(state,action) => {
+      state.error = action.error.message
      })
      .addCase(reBookAPI.pending,(state) => {
       state.isLoading = true
@@ -114,6 +116,8 @@ const initialState = {
       state.isLoading = false;
       state.count++
       
+     }).addCase(reBookAPI.rejected,(state,action) => {
+      state.error = action.error.message
      })
     }
  })

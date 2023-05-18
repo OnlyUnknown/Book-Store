@@ -16,7 +16,9 @@ const BookList = () => {
     }, [dispatch,count])
     if(isLoading === true){
         return <div>Loading</div>
-    } else if(isLoading === false){
+    }else if(error !== undefined){
+        return <div>{error}</div>
+    }else if(isLoading === false){
         return (
             <div>
             { Object.keys(booksList).map((item) => {
