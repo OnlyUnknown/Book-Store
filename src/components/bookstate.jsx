@@ -17,19 +17,23 @@ const BookList = () => {
     if(isLoading === true){
         return <div>Loading</div>
     } else if(isLoading === false){
-        return <div>Loaded</div>
+        return (
+            <div>
+            { Object.keys(booksList).map((item) => {
+               const BookL = booksList[item][0]
+                
+                   return( <Book key={BookL.item_id} id={BookL.item_id} Name={BookL.title} 
+                Author={BookL.title} 
+                Genre={BookL.catigory}/>
+               ) 
+                })
+               
+            }
+            
+            </div>
+        )
     }
-    return(
-        <div>
-        {booksList.map((item) => {
-           return( <Book key={item.item_id} id={item.item_id} Name={item.title} 
-            Author={item.author} 
-            Genre={item.catigory}/>
-           )
-        })}
-        
-        </div>
-    )
+    
 }
 
 
