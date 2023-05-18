@@ -1,13 +1,9 @@
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { postBooks } from '../redux/books/booksSlice';
 
 
 const AddForm = () => {
   const dispatch = useDispatch()
-  const {booksList, isLoading, error} = useSelector((store) => 
-      store.books
-      
-  )
  
 
 

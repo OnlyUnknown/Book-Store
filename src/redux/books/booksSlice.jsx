@@ -25,7 +25,7 @@ export const reBookAPI = createAsyncThunk('books/removeBook', async (id) => {
     const response = await axios.delete(`${url}/${id}`);
     return response.data;
   } catch (error) {
-    return isRejectedWithValue(error.response.data);
+    return error.message;
   }
 });
 
@@ -98,11 +98,11 @@ const initialState = {
         
         state.error = action.error.message
       })
-     .addCase(postBooks.pending, (state,action) => {
+     .addCase(postBooks.pending, (state) => {
       state.isLoading = true
       
      })
-     .addCase(postBooks.fulfilled,(state,action) => {
+     .addCase(postBooks.fulfilled,(state) => {
       state.isLoading = false
       state.count++
      }).addCase(postBooks.rejected,(state,action) => {
@@ -112,7 +112,7 @@ const initialState = {
       state.isLoading = true
       
      })
-     .addCase(reBookAPI.fulfilled,(state,action) => {
+     .addCase(reBookAPI.fulfilled,(state) => {
       state.isLoading = false;
       state.count++
       
