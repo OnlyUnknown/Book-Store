@@ -1,15 +1,20 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { reBookAPI,removeBook,getAPI } from '../redux/books/booksSlice';
+import { useEffect } from 'react';
+
+
+
 
 const Book = ( props) => {
+   
     const dispatch = useDispatch()
     const {id, Name, Author, Genre } = props
     return <div key={id}>
         <p>{Genre}</p>
         <h3>{Name}</h3>
         <p>{Author}</p>
-        <button onClick={() => dispatch(removeBook(id))}>Delete</button>
+        <button onClick={() => dispatch(reBookAPI(id))}>Delete</button>
     </div>
     }
 

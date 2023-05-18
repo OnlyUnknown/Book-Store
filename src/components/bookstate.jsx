@@ -6,14 +6,14 @@ import { useEffect } from "react"
 
 const BookList = () => {
     const dispatch = useDispatch()
-    const {booksList, isLoading, error} = useSelector((store) => 
+    const {booksList, isLoading, error,count} = useSelector((store) => 
         store.books
         
     )
     useEffect(() => {
         
         dispatch(getAPI())
-    }, [dispatch])
+    }, [dispatch,count])
     if(isLoading === true){
         return <div>Loading</div>
     } else if(isLoading === false){
@@ -22,7 +22,7 @@ const BookList = () => {
             { Object.keys(booksList).map((item) => {
                const BookL = booksList[item][0]
                 
-                   return( <Book key={BookL.item_id} id={BookL.item_id} Name={BookL.title} 
+                   return( <Book key={item} id={item} Name={BookL.title} 
                 Author={BookL.title} 
                 Genre={BookL.catigory}/>
                ) 

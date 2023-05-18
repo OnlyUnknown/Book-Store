@@ -20,6 +20,15 @@ export const getAPI = createAsyncThunk(
 }
 )
 
+export const reBookAPI = createAsyncThunk('books/removeBook', async (id) => {
+  try {
+    const response = await axios.delete(`${url}/${id}`);
+    return response.data;
+  } catch (error) {
+    return isRejectedWithValue(error.response.data);
+  }
+});
+
 
 export const postBooks = createAsyncThunk(
 
@@ -44,26 +53,10 @@ export const postBooks = createAsyncThunk(
 
 
 const initialState = {
-    booksList : [ {
-        item_id: "item1",
-        title: "The Great Gatsby",
-        author: "John Smith",
-        catigory: "Fiction"
-      },
-      {
-        item_id: "item2",
-        title: "Anna Karenina",
-        author: "Leo Tolstoy",
-        catigory: "Fiction"
-      },
-      {
-        item_id: "item3",
-        title: "The Selfish Gene",
-        author: "Richard Dawkins",
-        catigory: "Nonfiction"
-      }],
+    booksList : [],
       isLoading: false,
-      error: undefined
+      error: undefined,
+      count: 0
 };
 
  const booksSlice = createSlice({
@@ -96,18 +89,31 @@ const initialState = {
       })
       .addCase(getAPI.fulfilled, (state,action) => {
         state.booksList = action.payload
+        
         state.isLoading = false
       })
       .addCase(getAPI.rejected, (state,action) => {
         state = false;
         state.booksList = [];
+        
         state.error = action.error.message
       })
      .addCase(postBooks.pending, (state,action) => {
       state.isLoading = true
+      
      })
      .addCase(postBooks.fulfilled,(state,action) => {
       state.isLoading = false
+      state.count++
+     })
+     .addCase(reBookAPI.pending,(state) => {
+      state.isLoading = true
+      
+     })
+     .addCase(reBookAPI.fulfilled,(state,action) => {
+      state.isLoading = false;
+      state.count++
+      
      })
     }
  })
