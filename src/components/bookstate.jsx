@@ -1,16 +1,26 @@
 import Book from "./book"
 import AddForm from "./AddForm"
-import { useSelector } from "react-redux"
+import { useSelector,useDispatch } from "react-redux"
+import { getAPI,postBooks } from "../redux/books/booksSlice"
+import { useEffect } from "react"
 
-
-
+postBooks("1","2","3","4")
+console.log(postBooks())
 
 const BookList = () => {
-    const {booksList} = useSelector((store) => 
+    const dispatch = useDispatch()
+    const {booksList, isLoading, error} = useSelector((store) => 
         store.books
         
     )
-    
+    useEffect(() => {
+        dispatch(getAPI())
+    }, [dispatch])
+    if(isLoading === true){
+        return <div>Loading</div>
+    } else if(isLoading === false){
+        return <div>{booksList}</div>
+    }
     return(
         <div>
         {booksList.map((item) => {

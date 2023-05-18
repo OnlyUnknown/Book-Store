@@ -18,7 +18,28 @@ export const getAPI = createAsyncThunk(
 
 }
 )
-getAPI()
+
+
+export const postBooks = createAsyncThunk(
+
+  'Books/fetchbook', async (ID,title,author,category) =>{ 
+   try{
+   const response = await axios.post(url, {
+    item_id : ID,
+    title: title,
+    author: author,
+    category: category
+   }
+    )
+     
+     return response.data
+   } catch(err){
+     return err.message
+   }
+ 
+ }
+ )
+
 
 
 const initialState = {
@@ -39,7 +60,9 @@ const initialState = {
         title: "The Selfish Gene",
         author: "Richard Dawkins",
         catigory: "Nonfiction"
-      }]
+      }],
+      isLoading: true,
+      error: undefined
 };
 
  const booksSlice = createSlice({
@@ -64,6 +87,21 @@ const initialState = {
                 item.item_id !== Id
             )
         }
+    },
+    extraReducers (builder) {
+      builder
+      .addCase(getAPI.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getAPI.fulfilled, (state,action) => {
+        state.booksList = action.payload
+        state.isLoading = false
+      })
+      .addCase(getAPI.rejected, (state,action) => {
+        state = false;
+        state.booksList = [];
+        state.error = action.error.message
+      })
     }
  })
 
