@@ -2,10 +2,15 @@ import Book from "./book"
 import AddForm from "./AddForm"
 import { useSelector } from "react-redux"
 
+
+
+
 const BookList = () => {
     const {booksList} = useSelector((store) => 
         store.books
+        
     )
+    
     return(
         <div>
         {booksList.map((item) => {
@@ -18,6 +23,7 @@ const BookList = () => {
         </div>
     )
 }
+
 
 const Bookstate = () => {
     return <>
