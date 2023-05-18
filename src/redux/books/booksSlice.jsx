@@ -1,5 +1,6 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios"
+import { v4 as uuidv4 } from 'uuid';
 
 
 const url = "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/GqbjaefJTpcsI7CgFsuq/books"
@@ -10,7 +11,7 @@ export const getAPI = createAsyncThunk(
  'Books/fetchbook', async () =>{ 
   try{
   const response = await axios.get(url)
-    
+    console.log(response.data)
     return response.data
   } catch(err){
     return err.message
@@ -22,22 +23,22 @@ export const getAPI = createAsyncThunk(
 
 export const postBooks = createAsyncThunk(
 
-  'Books/fetchbook', async (ID,title,author,category) =>{ 
+  'Books/postBook', async ([title,author]) =>{ 
    try{
    const response = await axios.post(url, {
-    item_id : ID,
+    item_id : uuidv4(),
     title: title,
     author: author,
-    category: category
-   }
-    )
-     
-     return response.data
+    category: "Not selected"
+   })
+   console.log(response.data)
+   return response.data
    } catch(err){
      return err.message
    }
  
  }
+ 
  )
 
 
@@ -61,7 +62,7 @@ const initialState = {
         author: "Richard Dawkins",
         catigory: "Nonfiction"
       }],
-      isLoading: true,
+      isLoading: false,
       error: undefined
 };
 
@@ -102,6 +103,12 @@ const initialState = {
         state.booksList = [];
         state.error = action.error.message
       })
+     .addCase(postBooks.pending, (state,action) => {
+      state.isLoading = true
+     })
+     .addCase(postBooks.fulfilled,(state,action) => {
+      state.isLoading = false
+     })
     }
  })
 

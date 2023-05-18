@@ -1,11 +1,8 @@
 import Book from "./book"
 import AddForm from "./AddForm"
 import { useSelector,useDispatch } from "react-redux"
-import { getAPI,postBooks } from "../redux/books/booksSlice"
+import { getAPI } from "../redux/books/booksSlice"
 import { useEffect } from "react"
-
-postBooks("1","2","3","4")
-console.log(postBooks())
 
 const BookList = () => {
     const dispatch = useDispatch()
@@ -14,12 +11,13 @@ const BookList = () => {
         
     )
     useEffect(() => {
+        
         dispatch(getAPI())
     }, [dispatch])
     if(isLoading === true){
         return <div>Loading</div>
     } else if(isLoading === false){
-        return <div>{booksList}</div>
+        return <div>Loaded</div>
     }
     return(
         <div>
