@@ -1,3 +1,63 @@
-.h {
-  color: aliceblue;
+.Nav-C {
+  display: flex;
+  width: 87.5rem;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #fff;
+}
+
+.BookCMS{
+ width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+  color: #0290ff;
+}
+
+.Nav-L{
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.Nav-L li {
+  
+  width: 3.688rem;
+  height: 1rem;
+  margin: 0rem 2.563rem 0.688rem 0;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.icon{
+  width: 2.813rem;
+  height: 2.813rem;
+  margin: 0 0 0 41.5rem;
+  padding: 0.875rem;
+  border: solid 1px var(--white);
 }
