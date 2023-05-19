@@ -9,6 +9,7 @@ function App() {
   return (
     <>
     <Nav/>
+    <div className="Line"></div>
     <Routes>
      <Route path='/' element={<Bookstate/>}/>
      <Route path='/catigories' element={<Catigories/>}/> 

@@ -9,6 +9,7 @@ const Nav = () => {
         <li><Link to="/catigories">Catigories</Link></li>
     </ul>
     <img src="https://static.vecteezy.com/system/resources/thumbnails/002/387/693/small/user-profile-icon-free-vector.jpg" className="icon"/>
+    
     </div>
 }
 

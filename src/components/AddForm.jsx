@@ -17,11 +17,12 @@ const handleClick2 = () => {
 }
 
   
-    return<>
+    return<div className='addC'>
+    <h2 className='addNew'>ADD NEW BOOK</h2>
     <input className="titlebook" placeholder="Book Name" type="text"></input>
     <input className='authorbook' placeholder="Author" type="text"></input>
-    <button onClick={() => dispatch(postBooks([handleClick(), handleClick2()]))}>Add book</button>
-    </>
+    <button className='addB' onClick={() => dispatch(postBooks([handleClick(), handleClick2()]))}>Add book</button>
+    </div>
 }
 
 export default AddForm
