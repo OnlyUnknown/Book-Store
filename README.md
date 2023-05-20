@@ -130,6 +130,10 @@ Install this project with:
 To run the project, execute the following command:
 npm start
 
+
+```sh
+  npm run dev
+```
 <!--
 ```sh
   rails server
