@@ -25,7 +25,7 @@ const BookList = () => {
                const BookL = booksList[item][0]
                 
                    return( <Book key={item} id={item} Name={BookL.title} 
-                Author={BookL.title} 
+                Author={BookL.author} 
                 Genre={BookL.catigory}/>
                ) 
                 })
@@ -41,7 +41,6 @@ const BookList = () => {
 
 const Bookstate = () => {
     return <>
-    <h2>This is Home page</h2>
     <BookList/>
     <br/>
     <br/>

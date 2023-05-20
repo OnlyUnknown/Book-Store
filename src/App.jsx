@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-    <h1>book store</h1>
     <Nav/>
+    <div className="Line"></div>
     <Routes>
      <Route path='/' element={<Bookstate/>}/>
      <Route path='/catigories' element={<Catigories/>}/> 
