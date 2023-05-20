@@ -27,7 +27,7 @@ const Book = ( props) => {
             <div className='Rectangle'>
             
 
-<CircularProgressbar value={percentage} text={``} />;
+<CircularProgressbar value={percentage} text={``} />
             </div>
             <div>
                 <div className='Percentage'>64%</div>
