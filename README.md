@@ -128,12 +128,7 @@ Install this project with:
 ### Usage
 
 To run the project, execute the following command:
-npm start
-
-
-```sh
-  npm run dev
-```
+ npm run dev
 <!--
 ```sh
   rails server
