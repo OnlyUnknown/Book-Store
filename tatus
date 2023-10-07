@@ -1,0 +1,89 @@
+[33mcommit ae316f08f0fb07bd093b937ede641ff3048ac697[m[33m ([m[1;36mHEAD -> [m[1;32mRedux-Toolkit[m[33m, [m[1;31morigin/initialize-components[m[33m, [m[1;32minitialize-components[m[33m)[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Fri May 12 14:29:52 2023 +0300
+
+    Added key to the items and used liters
+
+[33mcommit a07484db5d6de60303121bd3a376c0424b33d8f0[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Fri May 12 14:27:48 2023 +0300
+
+    Book list has been added as a child
+
+[33mcommit d5760e2f5e91e5a3a0b49ec90444b2092a7f38e2[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Fri May 12 12:45:39 2023 +0300
+
+    Have added Catigories Page element
+
+[33mcommit c4294d7a7d11ca56e433f07f8062b813cab8fa93[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 19:31:17 2023 +0300
+
+    Replaced files for the lienters checker
+
+[33mcommit 6c81c6c16819fe172ea65f24b9ccd2585ed3f834[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 19:28:47 2023 +0300
+
+    Re update the files
+
+[33mcommit 756686b79d1fccf26059b90fa376610496c12fa1[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 19:28:03 2023 +0300
+
+    Update the files
+
+[33mcommit 15f341270b197be2d02995d46c5e7cc4e96bf752[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 19:24:43 2023 +0300
+
+    Linters
+
+[33mcommit 782f094a4a2d94de5c21b7b848006142ff3a8462[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 19:23:07 2023 +0300
+
+    Linters has been added
+
+[33mcommit 20820d5debe1fb0a4b446c016074a65052f19859[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 19:11:07 2023 +0300
+
+    Added linters
+
+[33mcommit 18c0b57ef727a80fb7ff8a50e281763fa493bf00[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 19:01:45 2023 +0300
+
+    Added read me file
+
+[33mcommit 344330a7a266f0881f913cf4e12369707f0559f8[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 18:21:31 2023 +0300
+
+    Added link routes to the Nav components
+
+[33mcommit 2daea260fea3a855a7dbc0674109591537829a0f[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 18:16:18 2023 +0300
+
+    Nav components has been added
+
+[33mcommit b74362a52d8ad94007e15cf95d4309c201262ad2[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 18:09:31 2023 +0300
+
+    Added book.jsx file to show individual book
+
+[33mcommit 08e801e3d78883c1850fd37ede85aa23abfb9330[m
+Author: Abdullah <abdullahkhrief@gmail.com>
+Date:   Thu May 11 17:38:26 2023 +0300
+
+    Components file and Routes has been set up
+
+[33mcommit ebc80e99f3ad052c9986ac11b669292555d3cfbe[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Abdullah AL-Khureif <abdullahkhrief@gmail.com>
+Date:   Thu May 11 16:02:53 2023 +0300
+
+    Initial commit
