@@ -122,7 +122,7 @@ Install this project with:
 
 ```sh
   cd bookstore
-  node install
+  npm install
 ```
 
 ### Usage
